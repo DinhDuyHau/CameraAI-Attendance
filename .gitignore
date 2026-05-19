@@ -1,10 +1,13 @@
-# Python virtual environment
-venv/
+# Visual Studio cache
+.vs/
+
+# Build output
+bin/
+obj/
 
 # Database files
 *.mdf
 *.ldf
 
-# Build output
-bin/
-obj/
+# Python virtual environment
+venv/
