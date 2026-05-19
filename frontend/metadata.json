@@ -1,0 +1,12 @@
+{
+  "name": "Analytical Sentinel",
+  "description": "Enterprise surveillance and AI-powered attendance management system.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "surveillance",
+    "ai-recognition",
+    "attendance-tracking"
+  ]
+}

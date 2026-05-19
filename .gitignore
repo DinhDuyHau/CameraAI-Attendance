@@ -1,0 +1,10 @@
+# Python virtual environment
+venv/
+
+# Database files
+*.mdf
+*.ldf
+
+# Build output
+bin/
+obj/

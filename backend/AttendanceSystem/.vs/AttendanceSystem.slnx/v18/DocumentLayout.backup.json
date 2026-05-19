@@ -1,0 +1,501 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\controllers\\camerascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:controllers\\camerascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\controllers\\attendancelogscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:controllers\\attendancelogscontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\dtos\\createattendancelogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:dtos\\createattendancelogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\dtos\\createemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:dtos\\createemployeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\controllers\\doorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:controllers\\doorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\reports\\attendancereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\reports\\attendancereportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\dtos\\reports\\attendancereportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:dtos\\reports\\attendancereportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\doorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\doorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\dtos\\cameradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:dtos\\cameradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\cameraservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\cameraservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\models\\attendancelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:models\\attendancelog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\dtos\\attendancelogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:dtos\\attendancelogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\attendancelogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\attendancelogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\interfaces\\iattendancelogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\interfaces\\iattendancelogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\models\\faceembedding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:models\\faceembedding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\dtos\\doordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:dtos\\doordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\interfaces\\icameraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\interfaces\\icameraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\services\\interfaces\\idoorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:services\\interfaces\\idoorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\models\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:models\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\models\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:models\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|d:\\work\\projects\\company\\vcb\\cameraai-attendance\\backend\\attendancesystem\\attendancesystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{98827018-EC86-17DE-9824-8B0C1B0EB979}|AttendanceSystem.csproj|solutionrelative:attendancesystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeesController.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAWwC0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T07:30:53.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AttendanceLogsController .cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\AttendanceLogsController .cs",
+              "RelativeDocumentMoniker": "Controllers\\AttendanceLogsController .cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\AttendanceLogsController .cs",
+              "RelativeToolTip": "Controllers\\AttendanceLogsController .cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T08:17:57.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateEmployeeDto.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\CreateEmployeeDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CreateEmployeeDto.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\CreateEmployeeDto.cs",
+              "RelativeToolTip": "DTOs\\CreateEmployeeDto.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T07:31:58.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateAttendanceLogDto.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\CreateAttendanceLogDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CreateAttendanceLogDto.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\CreateAttendanceLogDto.cs",
+              "RelativeToolTip": "DTOs\\CreateAttendanceLogDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T09:48:47.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\EmployeeService.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "Services\\EmployeeService.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwCEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T16:00:01.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CamerasController.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\CamerasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CamerasController.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\CamerasController.cs",
+              "RelativeToolTip": "Controllers\\CamerasController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:06:36.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Interfaces\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IEmployeeService.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Interfaces\\IEmployeeService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T07:36:55.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Models\\Employee.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\Employee.cs",
+              "RelativeToolTip": "Models\\Employee.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T07:28:40.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAnwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T02:45:16.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DoorsController.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\DoorsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoorsController.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Controllers\\DoorsController.cs",
+              "RelativeToolTip": "Controllers\\DoorsController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAswEUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:08:11.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-11T07:28:51.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAmwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T03:40:03.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T07:30:15.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AttendanceReportService.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Reports\\AttendanceReportService.cs",
+              "RelativeDocumentMoniker": "Services\\Reports\\AttendanceReportService.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Reports\\AttendanceReportService.cs",
+              "RelativeToolTip": "Services\\Reports\\AttendanceReportService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T03:37:07.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AttendanceReportDto.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\Reports\\AttendanceReportDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Reports\\AttendanceReportDto.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\Reports\\AttendanceReportDto.cs",
+              "RelativeToolTip": "DTOs\\Reports\\AttendanceReportDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T02:59:39.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DoorService.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\DoorService.cs",
+              "RelativeDocumentMoniker": "Services\\DoorService.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\DoorService.cs",
+              "RelativeToolTip": "Services\\DoorService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:04:07.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CameraDto.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\CameraDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CameraDto.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\CameraDto.cs",
+              "RelativeToolTip": "DTOs\\CameraDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T13:59:37.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-22T03:46:04.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AttendanceLog.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\AttendanceLog.cs",
+              "RelativeDocumentMoniker": "Models\\AttendanceLog.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\AttendanceLog.cs",
+              "RelativeToolTip": "Models\\AttendanceLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T08:07:21.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AttendanceLogDto.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\AttendanceLogDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\AttendanceLogDto.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\AttendanceLogDto.cs",
+              "RelativeToolTip": "DTOs\\AttendanceLogDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T08:25:52.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AttendanceLogService.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\AttendanceLogService.cs",
+              "RelativeDocumentMoniker": "Services\\AttendanceLogService.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\AttendanceLogService.cs",
+              "RelativeToolTip": "Services\\AttendanceLogService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T08:12:57.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IAttendanceLogService.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Interfaces\\IAttendanceLogService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IAttendanceLogService.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Interfaces\\IAttendanceLogService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IAttendanceLogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T08:12:21.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CameraService .cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\CameraService .cs",
+              "RelativeDocumentMoniker": "Services\\CameraService .cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\CameraService .cs",
+              "RelativeToolTip": "Services\\CameraService .cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwEkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:05:15.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FaceEmbedding.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\FaceEmbedding.cs",
+              "RelativeDocumentMoniker": "Models\\FaceEmbedding.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\FaceEmbedding.cs",
+              "RelativeToolTip": "Models\\FaceEmbedding.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T07:29:47.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DoorDto.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\DoorDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\DoorDto.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\DTOs\\DoorDto.cs",
+              "RelativeToolTip": "DTOs\\DoorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T13:59:18.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IDoorService.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Interfaces\\IDoorService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IDoorService.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Interfaces\\IDoorService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IDoorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:01:05.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ICameraService.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Interfaces\\ICameraService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ICameraService.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Services\\Interfaces\\ICameraService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ICameraService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:04:32.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Door.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\Door.cs",
+              "RelativeDocumentMoniker": "Models\\Door.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\Door.cs",
+              "RelativeToolTip": "Models\\Door.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T13:53:39.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\Camera.cs",
+              "RelativeDocumentMoniker": "Models\\Camera.cs",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\Models\\Camera.cs",
+              "RelativeToolTip": "Models\\Camera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:14:21.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AttendanceSystem.csproj",
+              "DocumentMoniker": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\AttendanceSystem.csproj",
+              "RelativeDocumentMoniker": "AttendanceSystem.csproj",
+              "ToolTip": "D:\\Work\\Projects\\Company\\VCB\\CameraAI-Attendance\\backend\\AttendanceSystem\\AttendanceSystem.csproj",
+              "RelativeToolTip": "AttendanceSystem.csproj",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-16T14:43:05.757Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
