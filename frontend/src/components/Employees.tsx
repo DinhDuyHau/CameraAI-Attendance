@@ -16,12 +16,11 @@ import { cn } from '@/src/lib/utils';
 import { useEffect, useState, FormEvent, useRef, ChangeEvent } from 'react';
 import { Employee } from '@/src/types';
 
-const stats = [
-  { label: 'Tổng nhân lực', value: '1,248', trend: '+12 tháng này', type: 'primary' },
-  { label: 'Nhận dạng khuôn mặt', value: '98.2%', trend: '1.225 hồ sơ đã đào tạo', type: 'secondary' },
-  { label: 'Đang chờ đào tạo', value: '23', trend: 'Cần chú ý', type: 'tertiary' },
-  { label: 'Vùng nhận dạng', value: '14', trend: 'Đầu cuối đang hoạt động', type: 'primary' },
-];
+type RecognitionImage = {
+  type: 'local' | 'server';
+  file?: File;
+  url: string;
+};
 
 export default function Employees() {
   const [employees, setEmployees] = useState<Employee[]>([]);
@@ -31,7 +30,7 @@ export default function Employees() {
   const [employeeToDelete, setEmployeeToDelete] = useState<Employee | null>(null);
   const [editingEmployee, setEditingEmployee] = useState<Employee | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [recognitionFiles, setRecognitionFiles] = useState<File[]>([]);
+  const [recognitionFiles, setRecognitionFiles] = useState<RecognitionImage[]>([]);
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [notification, setNotification] = useState<{message: string, type: 'success' | 'error'} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -48,6 +47,20 @@ export default function Employees() {
     avatarPath: '',
     faceEmbeddings: null as string | null
   });
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const stats = [
+    { label: 'Tổng nhân lực', value: employees.length.toLocaleString('vi-VN'), trend: '+12 tháng này', type: 'primary' },
+    { label: 'Nhận dạng khuôn mặt', value: '98.2%', trend: '1.225 hồ sơ đã đào tạo', type: 'secondary' },
+    { label: 'Đang chờ đào tạo', value: '23', trend: 'Cần chú ý', type: 'tertiary' },
+    { label: 'Vùng nhận dạng', value: '14', trend: 'Đầu cuối đang hoạt động', type: 'primary' },
+  ];
+  const ITEMS_PER_PAGE = 10;
+  const totalPages = Math.ceil(employees.length / ITEMS_PER_PAGE);
+  const paginatedEmployees = employees.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
 
   const fetchEmployees = () => {
     setLoading(true);
@@ -68,6 +81,7 @@ export default function Employees() {
       })
       .then(data => {
         setEmployees(Array.isArray(data) ? data : []);
+        setCurrentPage(1);
         setLoading(false);
       })
       .catch(err => {
@@ -81,12 +95,14 @@ export default function Employees() {
     fetchEmployees();
   }, []);
 
-  const handleOpenModal = (employee?: Employee) => {
+  const handleOpenModal = async (employee?: Employee) => {
     setSelectedFile(null);
     setRecognitionFiles([]);
     setPreviewUrl('');
     if (employee) {
       setEditingEmployee(employee);
+      const photos = await loadEmployeePhotos(employee.employeeID); // await
+      setRecognitionFiles(photos);
       setFormData({
         fullName: employee.fullName,
         employeeID: employee.employeeID,
@@ -126,14 +142,60 @@ export default function Employees() {
   const handleRecognitionFilesChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       const newFiles = Array.from(e.target.files);
-      setRecognitionFiles(prev => [...prev, ...newFiles]);
-      // Clear the input so the same file can be selected again if needed
+
+      const mappedFiles: RecognitionImage[] = newFiles.map(file => ({
+        type: 'local',
+        file,
+        url: URL.createObjectURL(file)
+      }));
+
+      setRecognitionFiles(prev => [...prev, ...mappedFiles]);
+
       e.target.value = '';
     }
   };
 
   const handleRemoveRecognitionFile = (index: number) => {
     setRecognitionFiles(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const buildAvatarUrl = (employeeID?: string | null) => {
+    if (!employeeID) return '';
+
+    return `/images/employees/${employeeID}/avatar/avatar.jpg`;
+  };
+
+  const photoModules = import.meta.glob(
+    '/public/images/employees/*/photos/*.{jpg,jpeg,png,JPG,JPEG,PNG}',
+    {
+      eager: true,
+      import: 'default'
+    }
+  ) as Record<string, string>;
+
+  const loadEmployeePhotos = async (employeeID: string): Promise<RecognitionImage[]> => {
+    const photos: RecognitionImage[] = [];
+
+    const entries = Object.entries(photoModules).filter(([path]) =>
+      path.includes(`/employees/${employeeID}/photos/`)
+    );
+
+    await Promise.all(
+      entries.map(async ([path, url]) => {
+        try {
+          const res = await fetch(url);
+          const blob = await res.blob();
+          const filename = path.split('/').pop() || 'photo.jpg';
+          const file = new File([blob], filename, { type: blob.type });
+          photos.push({ type: 'local', file, url });
+        } catch {
+          // fallback: giữ nguyên server type nếu fetch thất bại
+          photos.push({ type: 'server', url });
+        }
+      })
+    );
+
+    return photos;
   };
 
   const getAvatarUrl = (path: string | null) => {
@@ -228,10 +290,12 @@ export default function Employees() {
         }
 
         // Upload recognition photos if selected
-        if (recognitionFiles.length > 0 && employeeId) {
+        if ( employeeId) {
           const photosData = new FormData();
-          recognitionFiles.forEach((file: File) => {
-            photosData.append('files', file);
+          recognitionFiles.forEach((image) => {
+            if (image.file) {
+              photosData.append('files', image.file);
+            }
           });
           
           await fetch(`/api/Employees/upload-photos/${employeeId}`, {
@@ -338,7 +402,7 @@ export default function Employees() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                {employees.map((emp) => (
+                {paginatedEmployees.map((emp) => (
                   <tr key={emp.employeeID} className="hover:bg-slate-50 transition-colors group">
                     <td className="px-6 py-6">
                       <div className="flex items-center gap-4">
@@ -389,21 +453,71 @@ export default function Employees() {
           )}
           
           <div className="px-6 py-5 flex items-center justify-between text-sm border-t border-slate-100 bg-slate-50/30">
-            <p className="text-slate-500 font-medium">Hiển thị <span className="font-bold text-on-surface">1 - {employees.length}</span> trên tổng số <span className="font-bold text-on-surface">{employees.length}</span> nhân viên</p>
+            <p className="text-slate-500 font-medium">
+              Hiển thị{' '}
+              <span className="font-bold text-on-surface">
+                {employees.length === 0 ? 0 : (currentPage - 1) * ITEMS_PER_PAGE + 1}
+              </span>
+              {' '}-{' '}
+              <span className="font-bold text-on-surface">
+                {Math.min(currentPage * ITEMS_PER_PAGE, employees.length)}
+              </span>
+              {' '}trên tổng số{' '}
+              <span className="font-bold text-on-surface">{employees.length}</span> nhân viên
+            </p>
             <div className="flex gap-2">
-              <button className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:bg-white hover:shadow-sm transition-all">
+              <button
+                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:bg-white hover:shadow-sm transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              <button className="w-8 h-8 rounded-lg flex items-center justify-center bg-white shadow-sm font-bold text-primary">1</button>
-              <button className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:bg-white hover:shadow-sm transition-all">2</button>
-              <button className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:bg-white hover:shadow-sm transition-all">3</button>
-              <span className="px-2 text-slate-400 py-1">...</span>
-              <button className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:bg-white hover:shadow-sm transition-all">42</button>
-              <button className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:bg-white hover:shadow-sm transition-all">
+
+              {(() => {
+                const pages: (number | 'ellipsis')[] = [];
+                if (totalPages <= 5) {
+                  for (let i = 1; i <= totalPages; i++) pages.push(i);
+                } else {
+                  pages.push(1);
+                  if (currentPage > 3) pages.push('ellipsis');
+                  for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+                    pages.push(i);
+                  }
+                  if (currentPage < totalPages - 2) pages.push('ellipsis');
+                  pages.push(totalPages);
+                }
+
+                return pages.map((page, idx) =>
+                  page === 'ellipsis' ? (
+                    <span key={`ellipsis-${idx}`} className="px-2 text-slate-400 py-1">...</span>
+                  ) : (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={cn(
+                        "w-8 h-8 rounded-lg flex items-center justify-center transition-all",
+                        currentPage === page
+                          ? "bg-white shadow-sm font-bold text-primary"
+                          : "text-slate-600 hover:bg-white hover:shadow-sm"
+                      )}
+                    >
+                      {page}
+                    </button>
+                  )
+                );
+              })()}
+
+              <button
+                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages || totalPages === 0}
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:bg-white hover:shadow-sm transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              >
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -444,7 +558,7 @@ export default function Employees() {
                         <img src={previewUrl} alt="Preview" className="w-full h-full object-cover" />
                       ) : formData.avatarPath ? (
                         <img 
-                          src={`/uploads/${formData.avatarPath}`}
+                          src={buildAvatarUrl(editingEmployee?.employeeID)}
                           alt="Avatar" 
                           className="w-full h-full object-cover" 
                           referrerPolicy="no-referrer"
@@ -599,10 +713,10 @@ export default function Employees() {
 
                     {recognitionFiles.length > 0 && (
                       <div className="grid grid-cols-4 sm:grid-cols-5 gap-3 max-h-48 overflow-y-auto p-2 bg-slate-50/50 rounded-2xl border border-slate-100">
-                        {recognitionFiles.map((file, idx) => (
-                          <div key={`${file.name}-${idx}`} className="relative aspect-square group">
+                        {recognitionFiles.map((item, idx) => (
+                          <div key={`${item.url}-${idx}`} className="relative aspect-square group">
                             <img 
-                              src={URL.createObjectURL(file)} 
+                              src={item.url}
                               alt={`Recognition ${idx}`} 
                               className="w-full h-full object-cover rounded-xl border border-slate-200 shadow-sm"
                             />
