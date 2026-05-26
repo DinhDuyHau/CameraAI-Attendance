@@ -14,6 +14,9 @@ namespace AttendanceSystem.DTOs
     public class EmailRequest
     {
         public string Position { get; set; }
-        public string Message { get; set; }
+        public string EmployeeId { get; set; }
+        public DateTime EventTime { get; set; }
+        public string Location { get; set; }
+        public string Status { get; set; }
     }
 }

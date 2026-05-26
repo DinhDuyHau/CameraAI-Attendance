@@ -18,45 +18,12 @@ namespace AttendanceSystem.Services
         {
             _context = context;
         }
-        public async Task SendEmailAsync(string position, string message)
+        public async Task SendEmailAsync(string position, string employeeId, DateTime EventTime, string location, string status)
         {
-            var sending = await _context.SendingEmails
-                .FirstOrDefaultAsync(s => s.Position == position);
-
-            if (sending == null) return;
-
-            var employeeIds = sending.EmployeeIDs.Split(',')
-                .Select(id => id.Trim())
-                .ToList();
-
-            var recipients = await _context.Employees
-                .Where(e => employeeIds.Contains(e.EmployeeID))
-                .Select(e => e.Email)
-                .ToListAsync();
-
-            if (!recipients.Any()) return;
-
-            var smtpClient = new SmtpClient("smtp.gmail.com")
-            {
-                Port = 587,
-                Credentials = new NetworkCredential("luongthaiha01@gmail.com", "gyqe mssi bxhi zzdt"),
-                EnableSsl = true
-            };
-
-            var mail = new MailMessage
-            {
-                From = new MailAddress("luongthaiha01@gmail.com", "Attendance System"),
-                Subject = $"Notification for {position}",
-                Body = message,
-                IsBodyHtml = true
-            };
-
-            foreach (var recipient in recipients)
-            {
-                mail.To.Add(recipient);
-            }
-
-            await smtpClient.SendMailAsync(mail);
+            await _context.Database.ExecuteSqlRawAsync(
+                "EXEC SendEmployeeAlert @p0, @p1, @p2, @p3, @p4",
+                parameters: new object[] { position, employeeId, EventTime, location, status }
+            );
         }
     }
 }

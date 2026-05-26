@@ -16,7 +16,13 @@ public class EmailsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> SendEmail([FromBody] EmailRequest request)
     {
-        await _emailService.SendEmailAsync(request.Position, request.Message);
-        return Ok($"Emails sent for position: {request.Position}");
+        await _emailService.SendEmailAsync(
+            request.Position,
+            request.EmployeeId,
+            request.EventTime,
+            request.Location,
+            request.Status
+        );
+        return Ok("Email alert sent.");
     }
 }

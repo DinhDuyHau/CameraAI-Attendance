@@ -8,6 +8,6 @@ namespace AttendanceSystem.Services.Interfaces
 {
     public interface IEmailService
     {
-        Task SendEmailAsync(string position, string message);
+        Task SendEmailAsync(string position, string employeeId, DateTime EventTime, string location, string status);
     }
 }
