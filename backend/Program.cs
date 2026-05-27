@@ -32,7 +32,14 @@ builder.Services.AddHttpClient<IEmployeeService, EmployeeService>((sp, client) =
     client.BaseAddress = new Uri(baseUrl);
 });
 builder.Services.AddScoped<AttendanceReportService>();
-
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy => policy.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+});
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -64,6 +71,8 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
         c.RoutePrefix = string.Empty;
     });
 }
+
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

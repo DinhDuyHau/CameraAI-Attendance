@@ -12,5 +12,6 @@ namespace AttendanceSystem.Data
         public DbSet<Door> Doors { get; set; }
         public DbSet<Camera> Cameras { get; set; }
         public DbSet<AttendanceLog> AttendanceLogs { get; set; }
+        public DbSet<SendingEmail> SendingEmails { get; set; }
     }
 }
