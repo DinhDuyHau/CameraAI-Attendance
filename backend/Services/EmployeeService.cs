@@ -59,6 +59,7 @@ namespace AttendanceSystem.Services
             existing.Position = dto.Position;
             existing.Phone = dto.Phone;
             existing.Email = dto.Email;
+            existing.Monitor = dto.Monitor;
 
             existing.UpdatedAt = DateTime.Now;
             existing.UpdatedBy = "system";
@@ -122,7 +123,7 @@ namespace AttendanceSystem.Services
             if (employee == null) return false;
 
             // Thư mục gốc: images/employees/{EmployeeID}/photos
-            var rootDir = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "images", "employees", employee.EmployeeID, "photos");
+            var rootDir = Path.Combine(Directory.GetCurrentDirectory(), "..", "images", "employees", employee.EmployeeID, "photos");
             if (!Directory.Exists(rootDir))
                 Directory.CreateDirectory(rootDir);
 
@@ -152,38 +153,38 @@ namespace AttendanceSystem.Services
                 counter++;
             }
 
-            // Sau khi lưu ảnh, gọi sang FastAPI để tính embedding
-            var response = await _httpClient.GetAsync($"/embed?employee_id={employee.EmployeeID}");
-            if (response.IsSuccessStatusCode)
-            {
-                var content = await response.Content.ReadAsStringAsync();
-                var embeddingsResult = JsonSerializer.Deserialize<JsonElement>(content);
+            //// Sau khi lưu ảnh, gọi sang FastAPI để tính embedding
+            //var response = await _httpClient.GetAsync($"/embed?employee_id={employee.EmployeeID}");
+            //if (response.IsSuccessStatusCode)
+            //{
+            //    var content = await response.Content.ReadAsStringAsync();
+            //    var embeddingsResult = JsonSerializer.Deserialize<JsonElement>(content);
 
-                // embeddingsResult["embeddings"][employee.EmployeeID] là mảng float
-                var embeddingArray = embeddingsResult.GetProperty("embeddings")
-                                                     .GetProperty(employee.EmployeeID)
-                                                     .EnumerateArray()
-                                                     .Select(x => (float)x.GetDouble())
-                                                     .ToArray();
+            //    // embeddingsResult["embeddings"][employee.EmployeeID] là mảng float
+            //    var embeddingArray = embeddingsResult.GetProperty("embeddings")
+            //                                         .GetProperty(employee.EmployeeID)
+            //                                         .EnumerateArray()
+            //                                         .Select(x => (float)x.GetDouble())
+            //                                         .ToArray();
 
-                // Chuyển float[] sang byte[] để lưu DB
-                var bytes = new byte[embeddingArray.Length * sizeof(float)];
-                Buffer.BlockCopy(embeddingArray, 0, bytes, 0, bytes.Length);
+            //    // Chuyển float[] sang byte[] để lưu DB
+            //    var bytes = new byte[embeddingArray.Length * sizeof(float)];
+            //    Buffer.BlockCopy(embeddingArray, 0, bytes, 0, bytes.Length);
 
-                // Tạo bản ghi FaceEmbedding
-                var faceEmbedding = new FaceEmbedding
-                {
-                    EmployeeID = employee.EmployeeID,
-                    Embedding = bytes,
-                    ImagePath = string.Join(";", rootDir), // chỉ lưu thư mục
-                    Version = 1,
-                    CreatedAt = DateTime.Now,
-                    CreatedBy = "system"
-                };
+            //    // Tạo bản ghi FaceEmbedding
+            //    var faceEmbedding = new FaceEmbedding
+            //    {
+            //        EmployeeID = employee.EmployeeID,
+            //        Embedding = bytes,
+            //        ImagePath = string.Join(";", rootDir), // chỉ lưu thư mục
+            //        Version = 1,
+            //        CreatedAt = DateTime.Now,
+            //        CreatedBy = "system"
+            //    };
 
-                _context.FaceEmbeddings.Add(faceEmbedding);
-                await _context.SaveChangesAsync();
-            }
+            //    _context.FaceEmbeddings.Add(faceEmbedding);
+            //    await _context.SaveChangesAsync();
+            //}
 
             return true;
         }

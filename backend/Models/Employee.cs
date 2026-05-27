@@ -10,16 +10,12 @@ namespace AttendanceSystem.Models
         public string? FullName { get; set; }
         public string? Department { get; set; }
         public string? Position { get; set; }
-
-        // 🔥 Thêm mới
         public string? Phone { get; set; }
         public string? Email { get; set; }
-
         public string? AvatarPath { get; set; }
-
+        public bool Monitor { get; set; } = false;
         public bool Status { get; set; } = true;
 
-        // 🔥 Navigation (quan trọng)
         public ICollection<FaceEmbedding>? FaceEmbeddings { get; set; }
     }
 }
